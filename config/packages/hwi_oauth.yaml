@@ -4,6 +4,12 @@ hwi_oauth:
 
     # https://github.com/hwi/HWIOAuthBundle/blob/master/Resources/doc/2-configuring_resource_owners.md
     resource_owners:
+        auth0:
+            type:           auth0
+            client_id:      '%env(AUTH0_ID)%'
+            client_secret:  '%env(AUTH0_SECRET)%'
+            base_url:       '%env(AUTH0_BASE_URL)%'
+            scope:          '%env(AUTH0_SCOPE)%'
         facebook:
             type:                facebook
             client_id:           '%env(FB_ID)%'
